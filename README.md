@@ -21,7 +21,9 @@ Some notes about each solution.
     I figured I'd solve it using bit shifting, but then I noticed I was basically XOR-ing the original value with 127, which gives you the original value.
     This makes the solution really simple.
 
-5b. 
+5b. Now that we know the F/B code is basically a binary representation, you can see it's a 10 digit binary, or any numbers between 0 and 1023.
+    So all seats are 0..1023, and we're looking the one not on the list, and no free seats next to you. 
+
 
 8a. I opted to create a Computer class and a State class. The instruction set is passed as state and then executed by the computer.
 8b. I kept a pointer stack in state, and then rewound the state, changing a jmp=>nop or nop=>jmp until it did not "crash". This is much faster than brute forcing.
