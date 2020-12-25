@@ -17,5 +17,11 @@ Some notes about each solution.
 
 4. Pretty easy using collections. You could make it more compact but separating each filter makes it more readable imo.
 
+5a. It took me a while to realise that the boarding pass codes are their own seat/column value in binary! Just B/F swapped with 0/1. 
+    I figured I'd solve it using bit shifting, but then I noticed I was basically XOR-ing the original value with 127, which gives you the original value.
+    This makes the solution really simple.
+
+5b. 
+
 8a. I opted to create a Computer class and a State class. The instruction set is passed as state and then executed by the computer.
 8b. I kept a pointer stack in state, and then rewound the state, changing a jmp=>nop or nop=>jmp until it did not "crash". This is much faster than brute forcing.
