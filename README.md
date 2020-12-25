@@ -24,6 +24,16 @@ Some notes about each solution.
 5b. Now that we know the F/B code is basically a binary representation, you can see it's a 10 digit binary, or any numbers between 0 and 1023.
     So all seats are 0..1023, and we're looking the one not on the list, and no free seats next to you. 
 
+6a. This kind of problem is really easy with Laravel Collections. We're looking for a count of all unique letters in an array.
+
+6b. This is quite a bit harder. Lots of ways to solve it. I opted to count string sequences. 
+    Assume it's a group of 3 people, then we're looking for sequences of 3 letters. Put all the letters
+    in an array, sort them, then check for the sequence. 
+
+7a. Recursive code doesn't grok well in my brain. There's probably a much better way.
+
+7b. Once you have 7a, this is very similar. Just some minor tweaks.
 
 8a. I opted to create a Computer class and a State class. The instruction set is passed as state and then executed by the computer.
+
 8b. I kept a pointer stack in state, and then rewound the state, changing a jmp=>nop or nop=>jmp until it did not "crash". This is much faster than brute forcing.
