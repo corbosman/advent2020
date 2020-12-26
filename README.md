@@ -9,7 +9,7 @@ To see a solution run:
 
 Some notes about each solution.
 
-1. Easy
+1. Easy [link](https://github.com/corbosman/advent2020/blob/main/app/Commands/Advent1a.php)
    
 2. Easy
 
