@@ -9,13 +9,17 @@ To see a solution run:
 
 Some notes about each solution.
 
-1. Easy [link](https://github.com/corbosman/advent2020/blob/main/app/Commands/Advent1a.php)
-   
-2. Easy
+1a. Easy [code](https://github.com/corbosman/advent2020/blob/main/app/Commands/Advent1a.php)
 
-3. Easy. To allow for wrapping of the line of trees, just use the modulo (%) of the line length (31).
+1b. Easy [code](https://github.com/corbosman/advent2020/blob/main/app/Commands/Advent1b.php)
 
-4. Pretty easy using collections. You could make it more compact but separating each filter makes it more readable imo.
+2a. Easy [code](https://github.com/corbosman/advent2020/blob/main/app/Commands/Advent2a.php)
+
+2b. Easy [code](https://github.com/corbosman/advent2020/blob/main/app/Commands/Advent2b.php)
+
+3. Easy. To allow for wrapping of the line of trees, just use the modulo (%) of the line length (31). [code](https://github.com/corbosman/advent2020/blob/main/app/Commands/Advent3a.php)
+
+4. Pretty easy using collections. You could make it more compact but separating each filter makes it more readable imo. [code](https://github.com/corbosman/advent2020/blob/main/app/Commands/Advent3b.php)
 
 5a. It took me a while to realise that the boarding pass codes are their own seat/column value in binary! Just B/F swapped with 0/1. 
     I figured I'd solve it using bit shifting, but then I noticed I was basically XOR-ing the original value with 127, which gives you the original value.
