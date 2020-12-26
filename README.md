@@ -36,4 +36,11 @@ Some notes about each solution.
 
 8a. I opted to create a Computer class and a State class. The instruction set is passed as state and then executed by the computer.
 
+
 8b. I kept a pointer stack in state, and then rewound the state, changing a jmp=>nop or nop=>jmp until it did not "crash". This is much faster than brute forcing.
+
+9a. Just did a slight optimization by keeping a running cache of the additions of the previous 25 numbers. For fun I did it the brute force method as well and the cache method was 5x faster.
+
+9b. Pretty easy once you have 9a. Only thing to realize is that you don't have to count above the invalid number. 
+
+
