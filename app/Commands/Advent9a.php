@@ -29,6 +29,7 @@ class Advent9a extends Command
                 $this->info("{$input[$i]} is not a count of the 25 numbers before it");
                 exit;
             } else {
+                /* update the cache by removing the first 25, and adding a new set of 25 */
                 $cache = $cache->slice(25);
                 for($j=$i; $j>($i-25); $j--) {
                     $cache->push($input[$i] + $input[$j]);

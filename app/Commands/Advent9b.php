@@ -21,7 +21,7 @@ class Advent9b extends Command
             for($j=$i; $j<count($input); $j++) {
                 $sum += (int)$input[$j];
                 if ($sum > $invalid) break;
-                if($sum == $invalid) break 2;
+                if($sum == $invalid and $i!=$j) break 2;
             }
         }
 
