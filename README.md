@@ -56,4 +56,6 @@ Some notes about each solution.
   The puzzle mentioned there is a trick. So I ended up drawing one of the graphs, and then I realized that once you know the connections from a specific adapter, you don't have to calculate it again. Totally obvious once you see it. Doh.
   So the trick is to keep a global cache of all connections from a specific adapter, so you can just take it from the cache instead of recalculating it over and over. [code](https://github.com/corbosman/advent2020/blob/main/app/Commands/Advent10b.php)
   
+11a. Not that difficult, just a lot of array manipulations. Maybe there's a smarter way. 
 
+11b. More of the same, with an extra loop for checking further into a direction. And even more array manipulations."
