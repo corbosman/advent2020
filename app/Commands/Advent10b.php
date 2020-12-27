@@ -40,11 +40,13 @@ class Advent10b extends Command
 
         /* for each adapter, find new connection possibilities */
         foreach($connectable as $index => $adapter) {
-//            if (!isset($this->cache[$adapter])) {
-//                $this->cache[$adapter] = $this->connections($adapter, $adapters->slice($index+1));
-//            }
-//            $count += $this->cache[$adapter];
-              $count += $this->connections($adapter, $adapters->slice($index+1));
+            if (!isset($this->cache[$adapter])) {
+                $this->cache[$adapter] = $this->connections($adapter, $adapters->slice($index+1));
+            }
+            $count += $this->cache[$adapter];
+
+            // non-cached version that will take forever
+            // $count += $this->connections($adapter, $adapters->slice($index+1));
         }
 
         return $count;
