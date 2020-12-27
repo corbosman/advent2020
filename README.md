@@ -53,7 +53,7 @@ Some notes about each solution.
 10a. Relatively straightforward. [code](https://github.com/corbosman/advent2020/blob/main/app/Commands/Advent10a.php)
 
 10b. This was the first puzzle that stumped me. It took me several hours. I was getting the right solutions for the test data, but the final data took forever. 
-  The puzzle mentioned there is a trick. So I ended up drawing one of the graphs, and then I realized that once you know the connections from a specific adapter, you don't have to calculate it again.
+  The puzzle mentioned there is a trick. So I ended up drawing one of the graphs, and then I realized that once you know the connections from a specific adapter, you don't have to calculate it again. Totally obvious once you see it. Doh.
   So the trick is to keep a global cache of all connections from a specific adapter, so you can just take it from the cache instead of recalculating it over and over. [code](https://github.com/corbosman/advent2020/blob/main/app/Commands/Advent10b.php)
   
 

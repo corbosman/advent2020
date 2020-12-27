@@ -10,27 +10,25 @@ class Advent10b extends Command
 {
     protected $signature = '10b';
     protected $description = 'Advent 10b';
+    protected $cache = [];
 
     public function handle()
     {
-        $adapters = collect(file(storage_path('10_test.txt'), FILE_IGNORE_NEW_LINES))
+        $adapters = collect(file(storage_path('10.txt'), FILE_IGNORE_NEW_LINES))
             ->sort()
             ->map(fn($adapter) => (int)$adapter)
             ->values();
 
-        $highest = $adapters->max();
-
         /* add the wall adapter */
-        $adapters->push($highest+3);
+        $adapters->push($adapters->max()+3);
 
-        $cache = [];
-
-        $result = $this->connections(0, $adapters, $cache);
+        /* find the results starting from adapter 0 */
+        $result = $this->connections(0, $adapters);
 
         $this->info($result);
     }
 
-    public function connections(int $current, Collection $adapters, array $cache) : int
+    public function connections(int $current, Collection $adapters) : int
     {
         /* if we only have 1 adapter, we only have 1 option */
         if ($adapters->count() === 1) return 1;
@@ -42,10 +40,11 @@ class Advent10b extends Command
 
         /* for each adapter, find new connection possibilities */
         foreach($connectable as $index => $adapter) {
-            if (!isset($cache[$adapter])) {
-                $cache[$adapter] = $this->connections($adapter, $adapters->slice($index+1), $cache);
-            }
-            $count += $cache[$adapter];
+//            if (!isset($this->cache[$adapter])) {
+//                $this->cache[$adapter] = $this->connections($adapter, $adapters->slice($index+1));
+//            }
+//            $count += $this->cache[$adapter];
+              $count += $this->connections($adapter, $adapters->slice($index+1));
         }
 
         return $count;
