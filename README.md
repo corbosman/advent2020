@@ -56,10 +56,10 @@ Some notes about each solution.
   The puzzle mentioned there is a trick. So I ended up drawing one of the graphs, and then I realized that once you know the connections from a specific adapter, you don't have to calculate it again. Totally obvious once you see it. Doh.
   So the trick is to keep a global cache of all connections from a specific adapter, so you can just take it from the cache instead of recalculating it over and over. [code](https://github.com/corbosman/advent2020/blob/main/app/Commands/Advent10b.php)
   
-11a. Not that difficult, just a lot of array manipulations. Maybe there's a smarter way. 
+11a. Not that difficult, just a lot of array manipulations. Maybe there's a smarter way. [code](https://github.com/corbosman/advent2020/blob/main/app/Commands/Advent11a.php)
 
-11b. More of the same, with an extra loop for checking further into a direction. And even more array manipulations."
+11b. More of the same, with an extra loop for checking further into a direction. And even more array manipulations." [code](https://github.com/corbosman/advent2020/blob/main/app/Commands/Advent11b.php)
 
-12a. More arrays. I keep the heading in degrees, seemed easiest to me. 
+12a. More arrays. I keep the heading in degrees, seemed easiest to me. [code](https://github.com/corbosman/advent2020/blob/main/app/Commands/Advent12a.php)
 
-12b. Similar to 12a, not that hard. Just have to know the way to rotate x,y coordinates around a central point.
+12b. Similar to 12a, not that hard. Just have to know the way to rotate x,y coordinates around a central point. [code](https://github.com/corbosman/advent2020/blob/main/app/Commands/Advent12b.php)
