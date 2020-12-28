@@ -59,3 +59,7 @@ Some notes about each solution.
 11a. Not that difficult, just a lot of array manipulations. Maybe there's a smarter way. 
 
 11b. More of the same, with an extra loop for checking further into a direction. And even more array manipulations."
+
+12a. More arrays. I keep the heading in degrees, seemed easiest to me. 
+
+12b. Similar to 12a, not that hard. Just have to know the way to rotate x,y coordinates around a central point.
