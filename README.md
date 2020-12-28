@@ -62,4 +62,4 @@ Some notes about each solution.
 
 12a. More arrays. I keep the heading in degrees, seemed easiest to me. [code](https://github.com/corbosman/advent2020/blob/main/app/Commands/Advent12a.php)
 
-12b. Similar to 12a, not that hard. Just have to know the way to rotate x,y coordinates around a central point. [code](https://github.com/corbosman/advent2020/blob/main/app/Commands/Advent12b.php)
+12b. Similar to 12a, not that hard. Just have to know the way to rotate x,y coordinates around a central point. I also changed 270 to 90 so the rotation is easier. [code](https://github.com/corbosman/advent2020/blob/main/app/Commands/Advent12b.php)
