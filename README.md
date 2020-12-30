@@ -70,3 +70,5 @@ Some notes about each solution.
      So I had a look at the reddit chat and saw "Chinese Remainder Theorem". Aha! And that solved it quickly, well.. after re-discovering that theorem. 
 
 14a. Much more to my liking. Simple bitmasks. Wrote it and executed correctly with the right answer in 1 go. 
+
+14b. Bit more difficult. You really have to think about how to apply all the masking. 
