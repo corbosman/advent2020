@@ -70,5 +70,9 @@ Some notes about each solution.
      So I had a look at the reddit chat and saw "Chinese Remainder Theorem". Aha! And that solved it quickly, well.. after re-discovering that theorem. 
 
 14a. Much more to my liking. Simple bitmasks. Wrote it and executed correctly with the right answer in 1 go. 
+     What's important to know is how to mask with those X strings. Let's say your value is 1001 (9), and the mask is X1X0 (=> 1100 = 12).
+     You do this by first replacing the 1 with 0 and X with 1 and performing an AND:  1001 & 1010 = 1000.
+     Then you take the mask again, but now replace the X with 0 and do an OR:  1000 | 0100 = 1100. 
+     
 
 14b. Bit more difficult. You really have to think about how to apply all the masking. 
