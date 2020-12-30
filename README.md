@@ -56,10 +56,17 @@ Some notes about each solution.
   The puzzle mentioned there is a trick. So I ended up drawing one of the graphs, and then I realized that once you know the connections from a specific adapter, you don't have to calculate it again. Totally obvious once you see it. Doh.
   So the trick is to keep a global cache of all connections from a specific adapter, so you can just take it from the cache instead of recalculating it over and over. [code](https://github.com/corbosman/advent2020/blob/main/app/Commands/Advent10b.php)
   
-11a. Not that difficult, just a lot of array manipulations. Maybe there's a smarter way. [code](https://github.com/corbosman/advent2020/blob/main/app/Commands/Advent11a.php)
+11a. Not that difficult, just a lot of array manipulations. Maybe there's a smarter way. Reminds me of Game of Life. [code](https://github.com/corbosman/advent2020/blob/main/app/Commands/Advent11a.php)
 
 11b. More of the same, with an extra loop for checking further into a direction. And even more array manipulations." [code](https://github.com/corbosman/advent2020/blob/main/app/Commands/Advent11b.php)
 
 12a. More arrays. I keep the heading in degrees, seemed easiest to me. [code](https://github.com/corbosman/advent2020/blob/main/app/Commands/Advent12a.php)
 
 12b. Similar to 12a, not that hard. Just have to know the way to rotate x,y coordinates around a central point. I also changed 270 to 90 so the rotation is easier. [code](https://github.com/corbosman/advent2020/blob/main/app/Commands/Advent12b.php)
+
+13a. Easy. 
+
+13b. Not easy at all. I started out trying the brute-force method. The examples solved just fine but the puzzle was too large for brute force. I knew there was a theorem about modulos but I just couldn't remember it.
+     So I had a look at the reddit chat and saw "Chinese Remainder Theorem". Aha! And that solved it quickly, well.. after re-discovering that theorem. 
+
+14a. Much more to my liking. Simple bitmasks. Wrote it and executed correctly with the right answer in 1 go. 
