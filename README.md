@@ -64,15 +64,22 @@ Some notes about each solution.
 
 12b. Similar to 12a, not that hard. Just have to know the way to rotate x,y coordinates around a central point. I also changed 270 to 90 so the rotation is easier. [code](https://github.com/corbosman/advent2020/blob/main/app/Commands/Advent12b.php)
 
-13a. Easy. 
+13a. Easy.  [code](https://github.com/corbosman/advent2020/blob/main/app/Commands/Advent13a.php)
 
 13b. Not easy at all. I started out trying the brute-force method. The examples solved just fine but the puzzle was too large for brute force. I knew there was a theorem about modulos but I just couldn't remember it.
-     So I had a look at the reddit chat and saw "Chinese Remainder Theorem". Aha! And that solved it quickly, well.. after re-discovering that theorem. 
+     So I had a look at the reddit chat and saw "Chinese Remainder Theorem". Aha! And that solved it quickly, well.. after re-discovering that theorem.   [code](https://github.com/corbosman/advent2020/blob/main/app/Commands/Advent13b.php)
 
 14a. Much more to my liking. Simple bitmasks. Wrote it and executed correctly with the right answer in 1 go. 
      What's important to know is how to mask with those X strings. Let's say your value is 1001 (9), and the mask is X1X0 (=> 1100 = 12).
      You do this by first replacing the 1 with 0 and X with 1 and performing an AND:  1001 & 1010 = 1000.
-     Then you take the mask again, but now replace the X with 0 and do an OR:  1000 | 0100 = 1100. 
-     
+     Then you take the mask again, but now replace the X with 0 and do an OR:  1000 | 0100 = 1100.   [code](https://github.com/corbosman/advent2020/blob/main/app/Commands/Advent14a.php)
 
-14b. Bit more difficult. You really have to think about how to apply all the masking. 
+14b. Bit more difficult. You really have to think about how to apply all the masking.   [code](https://github.com/corbosman/advent2020/blob/main/app/Commands/Advent14b.php)
+
+15a. I just keep an array of the last 2 times a value was seen. Remember to not keep all history or 15b will use too much memory.  [code](https://github.com/corbosman/advent2020/blob/main/app/Commands/Advent15a.php)
+
+15b. Same as 15a. I'm just brute forcing it. It takes about 10 seconds. Maybe there is a better way.  [code](https://github.com/corbosman/advent2020/blob/main/app/Commands/Advent15b.php)
+
+16a. Pretty easy. I just add all the ranges into 1 large array, then loop over the ticket numbers and see if they're in that array.  [code](https://github.com/corbosman/advent2020/blob/main/app/Commands/Advent16a.php)
+
+16b. This kind of code really make me sad, but it is what it is. Not sure it could be much better.  [code](https://github.com/corbosman/advent2020/blob/main/app/Commands/Advent16b.php)
