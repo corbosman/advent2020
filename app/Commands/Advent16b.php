@@ -109,6 +109,7 @@ class Advent16b extends Command
 
         } while($resolved === false);
 
+        /* since we only have 1 value left, just return that value and not the array */
         return $positions->map(fn($pos) => $pos->first());
     }
 }
